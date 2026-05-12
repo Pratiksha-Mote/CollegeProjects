@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cuisines - TestHub</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff8f9;
+        }
+
+        /* ✅ Top Bar */
+        .top-bar {
+            background: #8b5e7e;
+            text-align: center;
+            padding: 8px;
+            font-size: 16px;
+            color: #fff;
+        }
+        .top-bar a {
+            margin-left: 10px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* ✅ Header */
+        header {
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            border-bottom: 1px solid #e0d4e0;
+        }
+        header h1 {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            font-size: 32px;
+            color: #8b5e7e;
+        }
+        nav {
+            display: flex;
+            gap: 50px;
+            font-weight: bold;
+            font-size: 35px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #8b5e7e;
+        }
+
+        /* ✅ Main Content */
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #6b2e53;
+        }
+        .content {
+            width: 95%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 20px; 
+            justify-content: center;
+        }
+        .first, .second {
+            display: grid;
+            grid-template-columns: repeat(2, 180px); 
+            grid-template-rows: repeat(2, 180px);
+            gap: 10px;
+            padding: 15px;
+            border: 1px solid #e0a3c0;
+            width: 380px; 
+            margin-bottom: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .first:hover, .second:hover {
+            transform: scale(1.03);
+        }
+        .d1 {
+            width: 180px;
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 6px;
+            position: relative;
+            cursor: pointer;
+        }
+        .dish-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(139, 94, 126, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px 5px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 0 0 6px 6px;
+        }
+        .d1:hover .dish-info {
+            opacity: 1;
+        }
+        .first h2, .second h2 {
+            grid-column: span 2;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 18px;
+            color: #6b2e53;
+        }
+        .explore-btn {
+            display: inline-block;
+            margin: 5px auto 0 auto;
+            padding: 6px 12px;
+            background: #8b5e7e;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background 0.3s ease;
+            text-align: center;
+        }
+        .explore-btn:hover {
+            background: #6b2e53;
+        }
+
+        /* ✅ Footer */
+        footer {
+            background: #ff6f3c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        footer a {
+            color: #ffe0f0;
+            margin: 0 8px;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Section description */
+        .section-desc {
+            text-align:center;
+            color:#555;
+            max-width:600px;
+            margin:auto;
+            margin-bottom:20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        💛 Join our community! 
+        <a href="#">Sign Up</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>TestHub</h1>
+        <nav>
+            <a href="recipemain.html">Home</a>
+            <a href="recrecipe.html">Recipe</a>
+            <a href="reccusices.html">Cuisines</a>
+            <a href="reccaboutus.html">About us</a>
+            <a href="reclog.html">Log in</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <h1>World Flavors</h1>
+    <p class="section-desc">Discover popular dishes from different countries. Explore the rich flavors, traditional recipes, and culinary culture from around the world!</p>
+    
+    <div class="content">
+        <!-- America -->
+        <div class="second">
+            <div class="d1" style="background-image: url('us1.jpg');">
+                <div class="dish-info">
+                    <h3>Burger</h3>
+                    <p>Classic American burger with cheese & lettuce</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('us2.jpg');">
+                <div class="dish-info">
+                    <h3>Hot Dog</h3>
+                    <p>Grilled hot dog with mustard and ketchup</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('us3.jpg');">
+                <div class="dish-info">
+                    <h3>Apple Pie</h3>
+                    <p>Traditional sweet dessert with apples</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('us4.jpg');">
+                <div class="dish-info">
+                    <h3>Fried Chicken</h3>
+                    <p>Crispy Southern style fried chicken</p>
+                </div>
+            </div>
+            <h2>America</h2>
+            <a href="recAmerica.html" class="explore-btn">Explore Recipes</a>
+        </div>
+
+        <!-- Italy -->
+        <div class="second">
+            <div class="d1" style="background-image: url('it4.jpeg');">
+                <div class="dish-info">
+                    <h3>Pizza</h3>
+                    <p>Classic Italian pizza with mozzarella & tomato</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('it1.jpeg');">
+                <div class="dish-info">
+                    <h3>Pasta</h3>
+                    <p>Traditional Italian pasta with rich sauce</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('it2.jpeg');">
+                <div class="dish-info">
+                    <h3>Lasagna</h3>
+                    <p>Layers of pasta, meat, and cheese baked to perfection</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('it3.jpeg');">
+                <div class="dish-info">
+                    <h3>Tiramisu</h3>
+                    <p>Famous coffee-flavored Italian dessert</p>
+                </div>
+            </div>
+            <h2>Italian</h2>
+            <a href="recitalian.html" class="explore-btn">Explore Recipes</a>
+        </div>
+
+        <!-- Japan -->
+        <div class="second">
+            <div class="d1" style="background-image: url('jp1.jpeg');">
+                <div class="dish-info">
+                    <h3>Sushi</h3>
+                    <p>Fresh fish and rice rolls</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('jp2.jpeg');">
+                <div class="dish-info">
+                    <h3>Ramen</h3>
+                    <p>Japanese noodle soup with rich broth</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('jp3.jpeg');">
+                <div class="dish-info">
+                    <h3>Tempura</h3>
+                    <p>Crispy fried vegetables and seafood</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('jp4.jpeg');">
+                <div class="dish-info">
+                    <h3>Okonomiyaki</h3>
+                    <p>Japanese savory pancake with toppings</p>
+                </div>
+            </div>
+            <h2>Japanese</h2>
+            <a href="recjapan.html" class="explore-btn">Explore Recipes</a>
+        </div>
+
+        <!-- France -->
+        <div class="second">
+            <div class="d1" style="background-image: url('f1.jpg');">
+                <div class="dish-info">
+                    <h3>Croissant</h3>
+                    <p>Buttery, flaky French pastry</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('f2.jpg');">
+                <div class="dish-info">
+                    <h3>Coq au Vin</h3>
+                    <p>Chicken braised in wine with vegetables</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('f3.jpg');">
+                <div class="dish-info">
+                    <h3>Crème Brûlée</h3>
+                    <p>Rich custard dessert with caramelized sugar</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('f4.jpg');">
+                <div class="dish-info">
+                    <h3>Ratatouille</h3>
+                    <p>Traditional French vegetable stew</p>
+                </div>
+            </div>
+            <h2>French</h2>
+            <a href="recfrench.html" class="explore-btn">Explore Recipes</a>
+        </div>
+
+        <!-- China -->
+        <div class="second">
+            <div class="d1" style="background-image: url('friedRice.jpeg');">
+                <div class="dish-info">
+                    <h3>Fried Rice</h3>
+                    <p>Stir-fried rice with vegetables and soy sauce</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('dumplings.jpeg');">
+                <div class="dish-info">
+                    <h3>Dumplings</h3>
+                    <p>Steamed or fried dumplings with meat filling</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('sweet.jpeg');">
+                <div class="dish-info">
+                    <h3>Sweet & Sour</h3>
+                    <p>Crispy chicken in tangy sweet and sour sauce</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('china2.jpg');">
+                <div class="dish-info">
+                    <h3>Noodles</h3>
+                    <p>Stir-fried noodles with vegetables and sauce</p>
+                </div>
+            </div>
+            <h2>Chinese</h2>
+            <a href="recChina.html" class="explore-btn">Explore Recipes</a>
+        </div>
+
+        <!-- England -->
+        <div class="second">
+            <div class="d1" style="background-image: url('pak2.jpg');">
+                <div class="dish-info">
+                    <h3>Biryani</h3>
+                    <p>Fragrant rice with spiced meat and saffron</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('en1.jpg');">
+                <div class="dish-info">
+                    <h3>Curry</h3>
+                    <p>Spicy curry with vegetables or meat</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('en4.jpg');">
+                <div class="dish-info">
+                    <h3>Naan</h3>
+                    <p>Soft flatbread baked in tandoor oven</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('en3.jpg');">
+                <div class="dish-info">
+                    <h3>Full English Breakfast</h3>
+                    <p>Crispy fried pastry with spiced filling</p>
+                </div>
+            </div>
+            <h2>England</h2>
+            <a href="recEngland.html" class="explore-btn">Explore Recipes</a>
+        </div>
+
+        <!-- Mexico -->
+        <div class="second">
+            <div class="d1" style="background-image: url('coq_au_vin.jpeg');">
+                <div class="dish-info">
+                    <h3>Coq au Vin</h3>
+                    <p>Soft tortillas with meat and fresh toppings</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('croissant.jpeg');">
+                <div class="dish-info">
+                    <h3>Croissant</h3>
+                    <p>Large flour tortilla wrapped with fillings</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('yu1.jpg');">
+                <div class="dish-info">
+                    <h3>Quesadilla</h3>
+                    <p>Grilled tortilla with melted cheese</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('yu2.jpg');">
+                <div class="dish-info">
+                    <h3>Guacamole</h3>
+                    <p>Fresh avocado dip with lime and spices</p>
+                </div>
+            </div>
+            <h2>Yurop</h2>
+            <a href="recyurop.html" class="explore-btn">Explore Recipes</a>
+        </div>
+
+        <!-- Pakistan -->
+        <div class="second">
+            <div class="d1" style="background-image: url('chapariKabab.jpeg');">
+                <div class="dish-info">
+                    <h3>Chapli Kebab</h3>
+                    <p>Stir-fried noodles with sweet and sour sauce</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('pak2.jpg');">
+                <div class="dish-info">
+                    <h3>Biryani</h3>
+                    <p>Spicy and sour soup with shrimp</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('nihari.jpeg');">
+                <div class="dish-info">
+                    <h3>Nihari</h3>
+                    <p>Creamy coconut curry with herbs</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('haleem.jpeg');">
+                <div class="dish-info">
+                    <h3>Haleem</h3>
+                    <p>Sweet dessert with coconut milk</p>
+                </div>
+            </div>
+            <h2>Pakistan</h2>
+            <a href="recPak.html" class="explore-btn">Explore Recipes</a>
+        </div>
+
+        <!-- Africa -->
+        <div class="second">
+            <div class="d1" style="background-image: url('af2.jpg');">
+                <div class="dish-info">
+                    <h3>Moussaka</h3>
+                    <p>Layered casserole with eggplant and meat</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('fishChipes.jpeg');">
+                <div class="dish-info">
+                    <h3>Fish and Chips</h3>
+                    <p>Grilled meat wrapped in pita bread</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('af2.jpg');">
+                <div class="dish-info">
+                    <h3>Jollof Rice</h3>
+                    <p>Fresh salad with feta cheese and olives</p>
+                </div>
+            </div>
+            <div class="d1" style="background-image: url('af4.jpg');">
+                <div class="dish-info">
+                    <h3>Burger</h3>
+                    <p>Sweet pastry with nuts and honey</p>
+                </div>
+            </div>
+            <h2>Africa</h2>
+            <a href="recAfrica.html" class="explore-btn">Explore Recipes</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 TestHub. All Rights Reserved.</p>
+        <p>
+            <a href="recipemain.html">Home</a> |
+            <a href="recrecipe.html">Recipes</a> |
+            <a href="reccusices.html">Cuisines</a> |
+            <a href="reccaboutus.html">About</a>
+        </p>
+    </footer>
+
+</body>
+</html>

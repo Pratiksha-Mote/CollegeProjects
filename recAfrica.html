@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>African Recipes - TestHub</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #fff8f9; margin:0; }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            border-bottom: 1px solid #e0d4e0;
+        }
+
+        header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 36px;
+            color: #8b5e7e;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 50px;
+            font-weight: bold;
+            font-size: 35px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.2s ease;
+            position: relative;
+            left: 70px;
+            top:10px;
+        }
+
+        nav a:hover { color: #8b5e7e; }
+
+        /* Intro */
+        .intro {
+            text-align: center;
+            max-width: 600px;
+            margin: 30px auto 20px auto;
+            color: #555;
+            font-size: 18px;
+        }
+
+        /* Recipes */
+        .recipes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px;
+        }
+
+        .recipe-card {
+            border: 1px solid #e0a3c0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            background: #fff;
+            text-align: center;
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .recipe-card h3 {
+            margin: 10px;
+            color: #6b2e53;
+        }
+
+        .recipe-card p {
+            margin: 0 10px 10px 10px;
+            color: #333;
+        }
+
+        .explore-btn {
+            display: inline-block;
+            margin: 10px auto 15px auto;
+            padding: 8px 14px;
+            background: #8b5e7e;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background 0.3s ease;
+            cursor: pointer;
+        }
+
+        .explore-btn:hover { background: #6b2e53; }
+
+        /* Footer */
+        footer {
+            background: #ff6f3c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #ffe0f0;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        footer a:hover { text-decoration: underline; }
+
+        /* Responsive */
+        @media screen and (max-width: 900px) {
+            .recipes { grid-template-columns: repeat(2, 1fr); }
+            nav { flex-wrap: wrap; justify-content: center; }
+        }
+
+        @media screen and (max-width: 600px) {
+            .recipes { grid-template-columns: 1fr; }
+            header { flex-direction: column; text-align: center; gap: 10px; }
+            nav { flex-direction: column; gap: 10px; }
+            header h1 { font-size: 28px; }
+        }
+
+        /* Recipe card hover effect */
+        .recipe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>African Recipes</h1>
+    <nav>
+        <a href="recipemain.html">Home</a>
+        <a href="recrecipe.html">Recipe</a>
+        <a href="reccusices.html">Cuisines</a>
+        <a href="reccaboutus.html">About Us</a>
+        <a href="reclog.html">Log in</a>
+    </nav>
+</header>
+
+<p class="intro">
+Africa is a land of diverse flavors and traditions. From spicy stews of Ethiopia to savory South African curries, these dishes represent the richness of African cuisine.
+</p>
+
+<div class="recipes">
+    <div class="recipe-card">
+        <img src="af1.jpg" alt="Jollof Rice">
+        <h3>Jollof Rice</h3>
+        <p>West African spicy rice cooked in tomato sauce and spices.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/z4tNAyRdo70')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <div class="recipe-card">
+        <img src="af2.jpg" alt="Injera with Doro Wat">
+        <h3>Injera with Doro Wat</h3>
+        <p>Ethiopian sour flatbread with spicy chicken stew.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/zi4AT6uYKUs')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <div class="recipe-card">
+        <img src="af3.jpg" alt="Bunny Chow">
+        <h3>Bunny Chow</h3>
+        <p>South African bread loaf filled with spicy curry.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/Bjrh8BmI22k')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <div class="recipe-card">
+        <img src="bobotie.jpeg" alt="Bobotie">
+        <h3>Bobotie</h3>
+        <p>A baked dish of spiced minced meat with egg topping.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/LUNuJA-GOls')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <div class="recipe-card">
+        <img src="chapati.jpeg" alt="Chapati & Sukuma Wiki">
+        <h3>Chapati & Sukuma Wiki</h3>
+        <p>East African flatbread served with sautéed greens.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/8T97fGcccVE')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <div class="recipe-card">
+        <img src="mandazi.jpeg" alt="Mandazi">
+        <h3>Mandazi</h3>
+        <p>Soft, slightly sweet fried dough popular in East Africa.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/tUh2wN8Bxlw')" class="explore-btn">See Recipe</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 TestHub | All Rights Reserved</p>
+</footer>
+
+<!-- ✅ JavaScript Login Check -->
+<script>
+function openRecipe(url) {
+    const isLoggedIn = localStorage.getItem("loggedIn");
+
+    if (isLoggedIn === "true") {
+        window.open(url, "_blank");
+    } else {
+        alert("Please log in to view this recipe video.");
+        window.location.href = "reclog.html";
+    }
+}
+</script>
+
+</body>
+</html>

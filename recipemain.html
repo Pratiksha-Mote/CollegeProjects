@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TestHub</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff8f0;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: #8b5e7e;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 20px;
+        }
+
+        .top-bar a {
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            margin-left: 8px;
+        }
+
+        /* Header / Nav */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            border-bottom: 1px solid #e0d4e0;
+        }
+
+        header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 50px;
+            color: #8b5e7e;
+            margin: 0;
+            position: relative;
+            left: 6%;
+        }
+
+        nav {
+            display: flex;
+            gap: 50px;
+            font-weight: bold;
+            font-size: 35px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #8b5e7e;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #ff967a, #ff6f3c);
+            color: white;
+            text-align: center;
+            padding: 5px 20px 20px  20px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 30px;
+            margin-bottom: 10px;
+            height: 70%;;
+            border: 1px solid #d0a3c3;
+        }
+
+        .hero-section h2 {
+            font-size: 50px;
+            margin-bottom: 10px;
+            font-family: 'Georgia', serif;
+            position: relative;
+            top:5%;
+        }
+
+        .hero-section p {
+            font-size: 25px;
+            margin-bottom: 20px;
+            
+        }
+        .hero-content {
+    background-image: url(hci1.jpg);
+    height: 500px;
+    background-repeat: no-repeat; 
+    background-size: cover;      
+    background-position: center;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 20px 0;
+
+        }
+
+        .cta-button {
+            background-color: #fff;
+            color: #ff6f3c;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ffd6c3;
+            color: #ff6f3c;
+        }
+
+        /* Main Content Cards */
+        .cards-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 20px 40px 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .card h3 {
+            color: #8b5e7e;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #ff6f3c;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            position: relative;
+            height: 30px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        💛 Join our community! 
+        <a href="#">Sign Up</a>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <h1>TestHub</h1>
+        <nav>
+             <a href="recipemain.html">Home</a>
+            <a href="recrecipe.html">Recipe</a>
+            <a href="reccusices.html">Cuisines</a>
+            <a href="reccaboutus.html">About us</a>
+            <a href="reclog.html">Log in</a>
+         </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h2>Welcome to TestHub</h2>
+            <p>Your one-stop platform for learning, exploring, and testing ideas.</p>
+            
+        <div class="hero-content">
+            
+        </div>
+    </div>
+
+    <!-- Main Content Cards -->
+    <div class="cards-section">
+        <div class="card" onclick="cardClick('Learn')">
+            <h3>📚 Learn</h3>
+            <p>Access tutorials, guides, and resources to sharpen your skills.</p>
+        </div>
+        <div class="card" onclick="cardClick('Explore')">
+            <h3>🌍 Explore</h3>
+            <p>Discover new projects, ideas, and innovative solutions.</p>
+        </div>
+        <div class="card" onclick="cardClick('Test')">
+            <h3>⚙️ Test</h3>
+            <p>Try your ideas, experiment, and improve with real-time feedback.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 TestHub. All Rights Reserved.
+    </footer>
+
+    <script>
+        function cardClick(cardName) {
+            alert('Welcome to ' + cardName + ' section! This feature will be available soon.');
+        }
+        
+        // Add some hover effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.backgroundColor = '#f8f9fa';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.backgroundColor = '#fff';
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

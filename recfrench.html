@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore classic French recipes including croissants, ratatouille, coq au vin, crepes, beef bourguignon, and French onion soup at TestHub.">
+<title>French Recipes - TestHub</title>
+
+<style>
+    body { font-family: Arial, sans-serif; background: #fff8f9; margin: 0; }
+
+    header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            border-bottom: 1px solid #e0d4e0;
+        }
+
+        header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 50px;
+            color: #8b5e7e;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 50px;
+            font-weight: bold;
+            font-size: 35px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.2s ease;
+            position: relative;
+            left: 70px;
+            top:10px;
+        }
+
+        nav a:hover {
+            color: #8b5e7e;
+        }
+    .intro { text-align: center; max-width: 600px; margin: 30px auto 20px auto; color: #555; font-size: 18px; }
+
+    .recipes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 20px; }
+
+    .recipe-card {
+        border: 1px solid #e0a3c0;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        background: #fff;
+        text-align: center;
+    }
+
+    .recipe-card img { width: 100%; height: 180px; object-fit: cover; }
+    .recipe-card h3 { margin: 10px; color: #6b2e53; }
+    .recipe-card p { margin: 0 10px 10px 10px; color: #333; }
+
+    .explore-btn {
+        display: inline-block;
+        margin: 10px auto 15px auto;
+        padding: 8px 14px;
+        background: #8b5e7e;
+        color: #fff;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 14px;
+        transition: background 0.3s ease;
+        cursor: pointer;
+    }
+
+    .explore-btn:hover { background: #6b2e53; }
+
+    footer { background: #ff6f3c; color: white; text-align: center; padding: 15px; margin-top: 30px; }
+    footer a { color: #ffe0f0; text-decoration: none; margin: 0 8px; }
+    footer a:hover { text-decoration: underline; }
+
+    @media screen and (max-width: 900px) { .recipes { grid-template-columns: repeat(2, 1fr); } }
+    @media screen and (max-width: 600px) { .recipes { grid-template-columns: 1fr; } header { flex-direction: column; text-align: center; } nav { flex-direction: column; gap: 10px; } header h1 { font-size: 28px; } }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>French Recipes</h1>
+    <nav>
+        <a href="recipemain.html">Home</a>
+        <a href="recrecipe.html">Recipe</a>
+        <a href="reccusices.html">Cuisines</a>
+        <a href="reccaboutus.html">About us</a>
+        <a href="reclog.html">Log in</a>
+    </nav>
+</header>
+
+<p class="intro">
+    French cuisine is known for its elegance, flavors, and tradition. 
+    Here are six of the most iconic French dishes you can explore.
+</p>
+
+<div class="recipes">
+    <div class="recipe-card">
+        <img src="croissant.jpeg" alt="Croissants">
+        <h3>Croissants</h3>
+        <p>Flaky, buttery pastry enjoyed at breakfast.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/djnNkLi_K6E')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <div class="recipe-card">
+        <img src="ratatouille.jpeg" alt="Ratatouille">
+        <h3>Ratatouille</h3>
+        <p>Provençal vegetable stew full of flavors.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/maV7qfJIE9k')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <div class="recipe-card">
+        <img src="coq_au_vin.jpeg" alt="Coq au Vin">
+        <h3>Coq au Vin</h3>
+        <p>Chicken braised in wine with mushrooms & onions.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/hJswLfXL_GA')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <div class="recipe-card">
+        <img src="crepes.jpeg" alt="Crêpes">
+        <h3>Crêpes</h3>
+        <p>Thin pancakes, can be sweet or savory.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/SpSrBGnjurA')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <div class="recipe-card">
+        <img src="beefBourn.jpeg" alt="Beef Bourguignon">
+        <h3>Beef Bourguignon</h3>
+        <p>Rich beef stew slow-cooked in red wine.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/OlcMgfSW0mc')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <div class="recipe-card">
+        <img src="misoSoup.jpeg" alt="French Onion Soup">
+        <h3>French Onion Soup</h3>
+        <p>Caramelized onion soup topped with cheesy bread.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/-DLDMQucqDI')" class="explore-btn">See Recipe</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 TestHub | All Rights Reserved</p>
+</footer>
+
+<script>
+function openRecipe(url) {
+    const isLoggedIn = localStorage.getItem("loggedIn");
+    if (isLoggedIn === "true") {
+        window.open(url, "_blank");
+    } else {
+        alert("Please log in to view this recipe video.");
+        window.location.href = "reclog.html";
+    }
+}
+</script>
+
+</body>
+</html>

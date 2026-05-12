@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Japanese Recipes - TestHub</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #fff8f9; margin:0; }
+        header { background:#8b5e7e; color:#fff; padding:15px; text-align:center; }
+        h1 { color:white; text-align:center; margin-top:20px; }
+        .intro { text-align:center; max-width:600px; margin:auto; color:#555; margin-bottom:20px; }
+        .recipes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px;
+        }
+
+        .recipe-card {
+            border:1px solid #e0a3c0;
+            border-radius:8px;
+            overflow:hidden;
+            box-shadow:0 2px 6px rgba(0,0,0,0.1);
+            background:#fff;
+        }
+
+        .recipe-card img { width:100%; height:180px; object-fit:cover; }
+        .recipe-card h3 { margin:10px; color:#6b2e53; }
+        .recipe-card p { margin:0 10px 10px 10px; color:#333; }
+
+        .explore-btn {
+            display:block;
+            text-align:center;
+            margin: 10px auto 15px auto;
+            padding:6px 12px;
+            background:#8b5e7e;
+            color:#fff;
+            border-radius:6px;
+            text-decoration:none;
+            font-size:14px;
+            transition: background 0.3s ease;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            border-bottom: 1px solid #e0d4e0;
+        }
+
+        header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 50px;
+            color: #8b5e7e;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 50px;
+            font-weight: bold;
+            font-size: 35px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.2s ease;
+            position: relative;
+            left: 70px;
+            top:10px;
+        }
+
+        nav a:hover {
+            color: #8b5e7e;
+        }
+
+        .explore-btn:hover { background:#6b2e53; }
+        footer { background: #ff6f3c; color:white; text-align:center; padding:15px; margin-top:30px; }
+        footer a { color:#ffe0f0; text-decoration:none; margin:0 8px; }
+        footer a:hover { text-decoration:underline; }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <h1>Japanese Recipes</h1>
+        <a href="recipemain.html">Home</a>
+        <a href="recrecipe.html">Recipe</a>
+        <a href="reccusices.html">Cuisines</a>
+        <a href="reccaboutus.html">About us</a>
+        <a href="reclog.html">Log in</a>
+    </nav>
+</header>
+
+<p class="intro">
+Japanese cuisine is famous for its fresh ingredients, delicate flavors, and artful presentation. Explore popular dishes like Sushi, Ramen, Tempura, and more!
+</p>
+
+<div class="recipes">
+    <!-- Sushi -->
+    <div class="recipe-card">
+        <img src="Sushi.jpeg" alt="Sushi">
+        <h3>Sushi</h3>
+        <p>Fresh fish and rice rolls, often wrapped in seaweed.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/h2Y8iqHTEv8')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <!-- Ramen -->
+    <div class="recipe-card">
+        <img src="ramen.jpeg" alt="Ramen">
+        <h3>Ramen</h3>
+        <p>Noodle soup with rich broth and toppings.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/plTuwZva37k')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <!-- Tempura -->
+    <div class="recipe-card">
+        <img src="tempura.jpeg" alt="Tempura">
+        <h3>Tempura</h3>
+        <p>Crispy fried seafood and vegetables.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/lzXzg8Pp9RE')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <!-- Okonomiyaki -->
+    <div class="recipe-card">
+        <img src="Okonomiyaki.jpeg" alt="Okonomiyaki">
+        <h3>Okonomiyaki</h3>
+        <p>Savory Japanese pancake with cabbage, meat, and sauce.</p>
+        <a href="#" onclick="openRecipe('https://www.youtube.com/shorts/cJ3v9g4LXsI?feature=share')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <!-- Takoyaki -->
+    <div class="recipe-card">
+        <img src="takoyaki.jpeg" alt="Takoyaki">
+        <h3>Takoyaki</h3>
+        <p>Fried dough balls filled with diced octopus.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/rCvDPxahmyY')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <!-- Miso Soup -->
+    <div class="recipe-card">
+        <img src="misoSoup.jpeg" alt="Miso Soup">
+        <h3>Miso Soup</h3>
+        <p>Traditional soup made with miso paste, tofu, and seaweed.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/hJ5-UmLCdvs')" class="explore-btn">See Recipe</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 TestHub | All Rights Reserved</p>
+</footer>
+
+<!-- ✅ JavaScript to check login before opening video -->
+<script>
+function openRecipe(url) {
+    const isLoggedIn = localStorage.getItem("loggedIn");
+
+    if (isLoggedIn === "true") {
+        // If logged in, open recipe video
+        window.open(url, "_blank");
+    } else {
+        // If not logged in, redirect to login page
+        alert("Please log in to view this recipe video.");
+        window.location.href = "reclog.html";
+    }
+}
+</script>
+
+</body>
+</html>

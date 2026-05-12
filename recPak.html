@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore classic Pakistani dishes like Biryani, Nihari, Chapli Kebab, Haleem, Chicken Karahi, and Sheer Khurma at TestHub.">
+    <title>Pakistani Recipes - TestHub</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #fff8f9; 
+            margin:0; 
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            border-bottom: 1px solid #e0d4e0;
+        }
+
+        header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 50px;
+            color: #8b5e7e;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 50px;
+            font-weight: bold;
+            font-size: 35px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.2s ease;
+            position: relative;
+            left: 70px;
+            top:10px;
+        }
+
+        nav a:hover {
+            color: #8b5e7e;
+        }
+        /* Intro */
+        .intro {
+            text-align: center;
+            max-width: 600px;
+            margin: 30px auto 20px auto;
+            color: #555;
+            font-size: 18px;
+        }
+
+        /* Recipes */
+        .recipes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px;
+        }
+
+        .recipe-card {
+            border: 1px solid #e0a3c0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            background: #fff;
+            text-align: center;
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .recipe-card h3 {
+            margin: 10px;
+            color: #6b2e53;
+        }
+
+        .recipe-card p {
+            margin: 0 10px 10px 10px;
+            color: #333;
+        }
+
+        .explore-btn {
+            display: block;
+            text-align: center;
+            margin: 10px auto 15px auto;
+            padding: 6px 12px;
+            background: #8b5e7e;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+
+        .explore-btn:hover {
+            background: #6b2e53;
+        }
+
+        /* Footer */
+        footer {
+            background: #ff6f3c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #ffe0f0;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 900px) {
+            .recipes { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media screen and (max-width: 600px) {
+            .recipes { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Pakistani Recipes</h1>
+    <nav>
+        <a href="recipemain.html">Home</a>
+        <a href="recrecipe.html">Recipe</a>
+        <a href="reccusices.html">Cuisines</a>
+        <a href="reccaboutus.html">About Us</a>
+        <a href="reclog.html">Log in</a>
+    </nav>
+</header>
+
+<p class="intro">
+    Pakistani cuisine is known for its rich flavors, spices, and slow-cooked dishes. 
+    Here are six of the most loved recipes representing the true taste of Pakistan.
+</p>
+
+<div class="recipes">
+    <!-- Biryani -->
+    <div class="recipe-card">
+        <img src="pak1.jpg" alt="Biryani - fragrant rice with meat and spices">
+        <h3>Biryani</h3>
+        <p>Fragrant rice dish layered with meat, spices, and saffron.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/KNNgK1IYlAA')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <!-- Nihari -->
+    <div class="recipe-card">
+        <img src="nihari.jpeg" alt="Nihari - spicy slow-cooked beef stew">
+        <h3>Nihari</h3>
+        <p>Slow-cooked spicy beef or lamb stew, served with naan.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/G_QDSVYuUmY')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <!-- Chapli Kebab -->
+    <div class="recipe-card">
+        <img src="chapariKabab.jpeg" alt="Chapli Kebab - minced meat patties">
+        <h3>Chapli Kebab</h3>
+        <p>Spicy minced meat patties fried until crispy and delicious.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/1SBAXIljv18')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <!-- Haleem -->
+    <div class="recipe-card">
+        <img src="haleem.jpeg" alt="Haleem - thick stew of meat, wheat, and lentils">
+        <h3>Haleem</h3>
+        <p>A thick stew made of meat, wheat, lentils, and spices.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/VNWz23p3OqM')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <!-- Chicken Karahi -->
+    <div class="recipe-card">
+        <img src="chickenKahari.jpeg" alt="Chicken Karahi - tomato-based chicken curry">
+        <h3>Chicken Karahi</h3>
+        <p>Tomato-based chicken curry cooked with chilies and spices.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/9XkJzHs87XQ')" class="explore-btn">See Recipe</a>
+    </div>
+
+    <!-- Sheer Khurma -->
+    <div class="recipe-card">
+        <img src="sheerKhurma.jpeg" alt="Sheer Khurma - festive milk dessert with dates and nuts">
+        <h3>Sheer Khurma</h3>
+        <p>A festive dessert made with milk, dates, vermicelli, and nuts.</p>
+        <a href="#" onclick="openRecipe('https://youtu.be/k8CNa0hginM')" class="explore-btn">See Recipe</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 TestHub | All Rights Reserved</p>
+</footer>
+
+<script>
+function openRecipe(url) {
+    const isLoggedIn = localStorage.getItem("loggedIn");
+    if (isLoggedIn === "true") {
+        window.open(url, "_blank");
+    } else {
+        alert("Please log in to view the recipe video.");
+        window.location.href = "reclog.html";
+    }
+}
+</script>
+
+</body>
+</html>

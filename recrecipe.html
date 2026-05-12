@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Recipe - TestHub</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fafafa;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: #8b5e7e;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 20px;
+        }
+
+        .top-bar a {
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            margin-left: 8px;
+        }
+
+        /* Header / Nav */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            border-bottom: 1px solid #e0d4e0;
+        }
+
+        header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 40px;
+            color: #8b5e7e;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 50px;
+            font-weight: bold;
+            font-size: 35px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #8b5e7e;
+        }
+
+        /* Recipe Page Content */
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+            color: #333;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            width: 95%;
+            margin: auto;
+            padding: 15px;
+        }
+
+        .recipe-card {
+            flex: 1 1 220px;
+            max-width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            background: white;
+            text-align: center;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .recipe-card:hover {
+            transform: scale(1.05);
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .recipe-card a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #ff6f3c;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 30px;
+        }
+    </style>
+
+    <script>
+        // Simulate registration/login status
+        let isRegistered = false; // change to true after login/register
+
+        // Function to handle recipe click
+        function handleRecipeClick(event, url) {
+            event.preventDefault();
+            if (!isRegistered) {
+                alert("Please register or log in to view the video!");
+                window.location.href = "reclog.html"; // redirect to login/register page
+            } else {
+                window.open(url, "_blank");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        💛 Join our community! 
+        <a href="#">Sign Up</a>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <h1>TestHub</h1>
+        <nav>
+            <a href="recipemain.html">Home</a>
+            <a href="recrecipe.html">Recipe</a>
+            <a href="reccusices.html">Cuisines</a>
+            <a href="reccaboutus.html">About us</a>
+            <a href="reclog.html">Log in</a>
+        </nav>
+    </header>
+
+    <!-- Page Title -->
+    <h1>Breakfast Delights - Easy & Tasty Recipes</h1>
+    
+    <!-- Recipes Grid -->
+    <div class="flex">
+        <div class="recipe-card">
+            <a href="#" onclick="handleRecipeClick(event, 'https://youtu.be/92E8JUypFt4?si=tz8iPoEHO7gRCl6H')">
+                <img src="pohe.jpg" alt="Pohe">
+                Pohe
+            </a>
+        </div>
+        <div class="recipe-card">
+            <a href="#" onclick="handleRecipeClick(event, 'https://youtu.be/0pgf6Hlzbpw?si=A-d3AjD4hiFDaPvE')">
+                <img src="chai.jpg" alt="Tea">
+                Tea
+            </a>
+        </div>
+        <div class="recipe-card">
+            <a href="#" onclick="handleRecipeClick(event, 'https://youtu.be/dcMlG1UA-jU?si=2m2bX7guga3w2Kqr')">
+                <img src="idli.jpg" alt="Idli">
+                Idli
+            </a>
+        </div>
+        <div class="recipe-card">
+            <a href="#" onclick="handleRecipeClick(event, 'https://youtube.com/shorts/e1gDtZpvfNY?si=q-WYJxuQjFWnKjv_')">
+                <img src="upma.jpg" alt="Upma">
+                Upma
+            </a>
+        </div>
+    </div>
+
+    <div class="flex">
+        <div class="recipe-card">
+            <a href="#" onclick="handleRecipeClick(event, 'https://youtu.be/BlzJzavriHw?si=ZcgepRURNljFe0xH')">
+                <img src="Sandwich.jpeg" alt="Sandwich">
+                Sandwich
+            </a>
+        </div>
+        <div class="recipe-card">
+            <a href="#" onclick="handleRecipeClick(event, 'https://youtu.be/P-u2wq8RVp4?si=4TAlIkjSZiNXiJN8')">
+                <img src="Dosa.jpg" alt="Dosa">
+                Dosa
+            </a>
+        </div>
+        <div class="recipe-card">
+            <a href="#" onclick="handleRecipeClick(event, 'https://youtu.be/VwLSUqy8KEE?si=AOzVuOL-y3nBnA9A')">
+                <img src="Aloo-Puri-Bhaji.jpg" alt="PuriBhaji">
+                PuriBhaji
+            </a>
+        </div>
+        <div class="recipe-card">
+            <a href="#" onclick="handleRecipeClick(event, 'https://youtu.be/iHDC4aNeJ58?si=6a-UBMzJdUu9Oo4s')">
+                <img src="KandaBhaji.jpeg" alt="KandaBhaji">
+                KandaBhaji
+            </a>
+        </div>
+    </div>
+
+    <div class="flex">
+        <div class="recipe-card">
+            <a href="#" onclick="handleRecipeClick(event, 'https://youtu.be/8uVOU0Tn3vI?si=PBr0a1B5RPAzI26D')">
+                <img src="vadaPav.jpeg" alt="Vada Pav">
+                Vada Pav
+            </a>
+        </div>
+        <div class="recipe-card">
+            <a href="#" onclick="handleRecipeClick(event, 'https://youtu.be/l7Zyu2liF-8?si=Cw3RRpF9QZua1P-F')">
+                <img src="capsicum-raita.jpg" alt="Capsicum Raita">
+                Capsicum Raita
+            </a>
+        </div>
+        <div class="recipe-card">
+            <a href="#" onclick="handleRecipeClick(event, 'https://youtu.be/Ww6C8LMaItk?si=eWfp7AYHmKpHi1F3')">
+                <img src="sabudana-khichdi.jpg" alt="Sabudana Khichdi">
+                Sabudana Khichdi
+            </a>
+        </div>
+        <div class="recipe-card">
+            <a href="#" onclick="handleRecipeClick(event, 'https://youtu.be/5nQhrH1cZW0?si=TFT3gZv4ChYo1MT1')">
+                <img src="dhoklaRecipe.jpg" alt="Dhokla">
+                Dhokla
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 TestHub. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
